@@ -1,90 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>A Very Important Question 💗</title>
-
+  <meta charset="UTF-8">
+  <title>Be My Valentine 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       height: 100vh;
-      font-family: 'Arial', sans-serif;
-      background: pink;
-      background-image: url("https://www.transparenttextures.com/patterns/hearts.png");
+      font-family: 'Roboto', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
+      background: linear-gradient(135deg, #ffc1d5, #ffe6f0, #ffd6e8);
       overflow: hidden;
     }
 
+    /* floating hearts in background */
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      opacity: 0.4;
+      animation: float 10s infinite linear;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.7); }
+      50% { transform: translateY(50vh) scale(1); }
+      100% { transform: translateY(-10vh) scale(0.7); }
+    }
+
     .card {
-      background: white;
-      width: 90%;
-      max-width: 420px;
-      padding: 30px;
+      background: rgba(255,255,255,0.95);
       border-radius: 25px;
+      padding: 35px 25px;
+      max-width: 450px;
+      width: 90%;
       text-align: center;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
       position: relative;
+      z-index: 2;
     }
 
-    h1 {
-      color: #e11d48;
+    .card h1 {
+      font-family: 'Pacifico', cursive;
+      color: #e91e63;
+      margin-bottom: 15px;
     }
 
-    p {
+    .card h2 {
+      color: #d81b60;
+      margin: 15px 0;
+    }
+
+    .card p {
+      margin: 8px 0;
       font-size: 16px;
+      line-height: 1.5;
+      color: #555;
     }
 
     img {
-      width: 110px;
-      margin: 8px;
+      width: 100px;
+      margin: 10px;
       border-radius: 15px;
     }
 
     button {
-      padding: 15px 28px;
-      font-size: 18px;
-      margin: 12px;
+      padding: 14px 28px;
+      font-size: 16px;
+      margin: 10px;
       border: none;
       border-radius: 30px;
       cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
     }
 
     .yes {
-      background: #ff4d88;
+      background: #f50057;
       color: white;
     }
 
     .no {
-      background: #d1d5db;
+      background: #9e9e9e;
       position: absolute;
     }
   </style>
 </head>
-
 <body>
+
+  <!-- floating hearts -->
+  <div class="heart" style="left:5%;">💖</div>
+  <div class="heart" style="left:20%;">💗</div>
+  <div class="heart" style="left:35%;">❤️</div>
+  <div class="heart" style="left:50%;">💞</div>
+  <div class="heart" style="left:65%;">💓</div>
+  <div class="heart" style="left:80%;">💘</div>
+  <div class="heart" style="left:90%;">💝</div>
 
   <div class="card" id="card">
     <h1>Hey You 💕</h1>
+    <p>I tried to act normal… but then I remembered:</p>
+    <p>You make every day brighter, every laugh sweeter, and my heart full 🥹</p>
 
-    <p>
-      I tried to be normal.<br>
-      I really did.<br>
-      But then I remembered…<br>
-      I’m hopelessly in love with you 🥹💗
-    </p>
+    <h2>So… will you be my Valentine?</h2>
 
-    <p><strong>So here’s the question:</strong></p>
-
-    <h2>Will you be my Valentine? 💘💫</h2>
-
-    <!-- cute stickers -->
-    <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
-    <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif">
+    <!-- cute stickers/images -->
+    <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Golden Retriever">
+    <img src="https://images.unsplash.com/photo-1585386959984-a4155222c7d8" alt="Teddy Bear">
 
     <br>
-
-    <button class="yes" onclick="yes()">YES 😍💖</button>
+    <button class="yes" onclick="yes()">YES 😍</button>
     <button class="no" id="no" onmouseover="runAway()">No 🙃</button>
   </div>
 
@@ -97,16 +127,13 @@
 
     function yes() {
       document.getElementById("card").innerHTML =
-        "<h1>You Are My Valentine 💖🥰</h1>" +
-        "<p style='font-size:18px;'>" +
-        "“In all the worlds, in all the lives,<br>" +
-        "my heart would still choose you.” ✨💞" +
-        "</p>" +
-        "<p><strong>And guess what?</strong></p>" +
-        "<p style='font-size:17px;'>Bella is in too 🐾🐶💗</p>" +
-        "<img src='https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif'>" +
-        "<img src='https://media.giphy.com/media/JRsQiAN79bPWUv43Ko/giphy.gif'>" +
-        "<p>I love you endlessly 💕🌸</p>";
+        `<h1>You Are My Valentine 💖🥰</h1>
+         <p style="font-size:18px;">"In all the worlds, in all the lives, my heart would still choose you."</p>
+         <p><strong>And guess what?</strong></p>
+         <p style="font-size:17px;">Bella is in too 🐾🐶💗</p>
+         <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
+         <img src="https://media.giphy.com/media/JRsQiAN79bPWUv43Ko/giphy.gif">
+         <p>I love you endlessly 💕🌸</p>`;
     }
   </script>
 
