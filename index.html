@@ -1,71 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>System Check 👀</title>
+  <title>A Very Important Question</title>
+
   <style>
     body {
-      background: #0f172a;
-      color: #e5e7eb;
+      margin: 0;
+      height: 100vh;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 80px;
+      background-image: url("https://images.unsplash.com/photo-1517841905240-472988babdf9");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .card {
-      background: #111827;
-      padding: 30px;
-      border-radius: 12px;
-      width: 85%;
+
+    .overlay {
+      background: rgba(255, 240, 245, 0.9);
+      width: 90%;
       max-width: 420px;
-      margin: auto;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      position: relative;
     }
+
+    img {
+      width: 120px;
+      border-radius: 15px;
+      margin: 10px;
+    }
+
     button {
-      padding: 14px 28px;
-      font-size: 17px;
+      padding: 14px 26px;
+      font-size: 16px;
       margin: 10px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
     }
+
     .yes {
-      background: #ec4899;
+      background: #e11d48;
       color: white;
     }
+
     .no {
-      background: #374151;
-      color: white;
+      background: #9ca3af;
       position: absolute;
     }
   </style>
+
 </head>
 
 <body>
 
-  <div class="card" id="card">
-    <h2>Running Compatibility Check…</h2>
-    <p>• Smile detected 😌</p>
-    <p>• Cute habits confirmed 🥰</p>
+  <div class="overlay" id="card">
+    <h2>Quick Compatibility Test</h2>
+    <p>• Laughs at my jokes ✔️</p>
     <p>• Makes my days better ✔️</p>
-    <p><strong>Status:</strong> Highly Compatible</p>
+    <p>• Has my full attention ✔️</p>
 
-    <h3>Proceed with Valentine Request?</h3>
+    <p><strong>Result:</strong> Highly Compatible</p>
 
-    <button class="yes" onclick="yes()">YES 💖</button>
-    <button class="no" id="no" onmouseover="moveNo()">No 😐</button>
+    <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Golden Retriever">
+    <img src="https://images.unsplash.com/photo-1585386959984-a4155222c7d8" alt="Teddy Bear">
+
+    <h3>Will you be my Valentine?</h3>
+
+    <button class="yes" onclick="yes()">Yes</button>
+    <button class="no" id="no" onmouseover="moveNo()">No</button>
   </div>
 
   <script>
     function moveNo() {
       const btn = document.getElementById("no");
-      btn.style.left = Math.random() * 250 + "px";
-      btn.style.top = Math.random() * 250 + "px";
+      btn.style.left = Math.random() * 200 + "px";
+      btn.style.top = Math.random() * 200 + "px";
     }
 
     function yes() {
       document.getElementById("card").innerHTML =
-        "<h1>Request Approved 🥰</h1>" +
-        "<p>You are officially my Valentine.</p>" +
-        "<p>Dinner. Dessert. You. ❤️</p>";
+        "<h1>Decision Approved</h1>" +
+        "<p>I promise loyalty, effort, and desserts.</p>" +
+        "<p>Dinner is on me.</p>";
     }
   </script>
 
