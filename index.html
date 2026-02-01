@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hey ❤️</title>
+  <title>Important Question 👀</title>
+  <style>
+    body {
+      background: #fff0f5;
+      text-align: center;
+      padding-top: 80px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #no {
+      position: absolute;
+    }
+  </style>
 </head>
-<body style="background:#ffe6f0; text-align:center; padding-top:100px; font-family:Arial;">
 
-  <h1>Hey 👀</h1>
-  <p>I made this just for you.</p>
+<body>
 
-  <h2>Will you be my Valentine? 💖</h2>
+  <h1>Hey you 👀</h1>
+  <p>I had two options:</p>
+  <p>1. Ask you normally 😌<br>2. Make a whole website 😎</p>
+  <p>I clearly chose option 2.</p>
 
-  <button onclick="yes()" style="padding:15px 30px; font-size:18px;">YES 💘</button>
+  <h2>So… will you be my Valentine? 💖</h2>
+
+  <button onclick="yes()">YES 💘</button>
+  <button id="no" onmouseover="moveNo()">No 🙄</button>
 
   <script>
+    function moveNo() {
+      const btn = document.getElementById("no");
+      btn.style.left = Math.random() * 300 + "px";
+      btn.style.top = Math.random() * 300 + "px";
+    }
+
     function yes() {
       document.body.innerHTML =
-        "<h1>You said YES 🥰</h1><p>Dinner is on me ❤️</p>";
+        "<h1>Correct answer 🥰</h1>" +
+        "<p>You just made me smile like an idiot.</p>" +
+        "<p>Dinner is on me ❤️</p>";
     }
   </script>
 
