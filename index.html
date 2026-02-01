@@ -1,91 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>A Very Important Question</title>
+  <title>A Very Important Question 💗</title>
 
   <style>
     body {
       margin: 0;
       height: 100vh;
-      font-family: Arial, sans-serif;
-      background-image: url("https://images.unsplash.com/photo-1517841905240-472988babdf9");
-      background-size: cover;
-      background-position: center;
+      font-family: 'Arial', sans-serif;
+      background: pink;
+      background-image: url("https://www.transparenttextures.com/patterns/hearts.png");
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
 
-    .overlay {
-      background: rgba(255, 240, 245, 0.9);
+    .card {
+      background: white;
       width: 90%;
       max-width: 420px;
-      padding: 25px;
-      border-radius: 20px;
+      padding: 30px;
+      border-radius: 25px;
       text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
       position: relative;
     }
 
+    h1 {
+      color: #e11d48;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
     img {
-      width: 120px;
+      width: 110px;
+      margin: 8px;
       border-radius: 15px;
-      margin: 10px;
     }
 
     button {
-      padding: 14px 26px;
-      font-size: 16px;
-      margin: 10px;
+      padding: 15px 28px;
+      font-size: 18px;
+      margin: 12px;
       border: none;
-      border-radius: 10px;
+      border-radius: 30px;
       cursor: pointer;
     }
 
     .yes {
-      background: #e11d48;
+      background: #ff4d88;
       color: white;
     }
 
     .no {
-      background: #9ca3af;
+      background: #d1d5db;
       position: absolute;
     }
   </style>
-
 </head>
 
 <body>
 
-  <div class="overlay" id="card">
-    <h2>Quick Compatibility Test</h2>
-    <p>• Laughs at my jokes ✔️</p>
-    <p>• Makes my days better ✔️</p>
-    <p>• Has my full attention ✔️</p>
+  <div class="card" id="card">
+    <h1>Hey You 💕</h1>
 
-    <p><strong>Result:</strong> Highly Compatible</p>
+    <p>
+      I tried to be normal.<br>
+      I really did.<br>
+      But then I remembered…<br>
+      I’m hopelessly in love with you 🥹💗
+    </p>
 
-    <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Golden Retriever">
-    <img src="https://images.unsplash.com/photo-1585386959984-a4155222c7d8" alt="Teddy Bear">
+    <p><strong>So here’s the question:</strong></p>
 
-    <h3>Will you be my Valentine?</h3>
+    <h2>Will you be my Valentine? 💘💫</h2>
 
-    <button class="yes" onclick="yes()">Yes</button>
-    <button class="no" id="no" onmouseover="moveNo()">No</button>
+    <!-- cute stickers -->
+    <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
+    <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif">
+
+    <br>
+
+    <button class="yes" onclick="yes()">YES 😍💖</button>
+    <button class="no" id="no" onmouseover="runAway()">No 🙃</button>
   </div>
 
   <script>
-    function moveNo() {
+    function runAway() {
       const btn = document.getElementById("no");
-      btn.style.left = Math.random() * 200 + "px";
-      btn.style.top = Math.random() * 200 + "px";
+      btn.style.left = Math.random() * 250 + "px";
+      btn.style.top = Math.random() * 250 + "px";
     }
 
     function yes() {
       document.getElementById("card").innerHTML =
-        "<h1>Decision Approved</h1>" +
-        "<p>I promise loyalty, effort, and desserts.</p>" +
-        "<p>Dinner is on me.</p>";
+        "<h1>You Are My Valentine 💖🥰</h1>" +
+        "<p style='font-size:18px;'>" +
+        "“In all the worlds, in all the lives,<br>" +
+        "my heart would still choose you.” ✨💞" +
+        "</p>" +
+        "<p><strong>And guess what?</strong></p>" +
+        "<p style='font-size:17px;'>Bella is in too 🐾🐶💗</p>" +
+        "<img src='https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif'>" +
+        "<img src='https://media.giphy.com/media/JRsQiAN79bPWUv43Ko/giphy.gif'>" +
+        "<p>I love you endlessly 💕🌸</p>";
     }
   </script>
 
